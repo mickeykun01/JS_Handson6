@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: tomato;">PROBLEM SOLVING logics</h1>
+
+    <h3>Find the Smaller Angle</h3>
+    <pre>var Minimal_Angle = (h, m) => 
+        {
+          const minuteAngle = m * 6;
+          const hourAngle = 0.5 * (h*60 + m);
+          const angle = Math.abs(hourAngle - minuteAngle);
+          return Math.min(angle, 360-angle);
+        };
+    </pre>
+
+    <h3>Check whether the year is Leap year or not.</h3>
+    <pre>var Check_Leap = (year) => 
+        {
+         if(year % 4 === 0 && year % 100 !== 0 || year % 400 === 0){
+           return "Leap Year";
+         }
+         else {
+           return "Non Leap Year";
+         }
+          
+        
+        };
+    </pre>
+
+    <h3>Perfect Number Check.</h3>
+    <pre>var Perfect_Check = (N) => 
+        {
+          let count = 0;
+          for(let i=1 ; i<=N ; i++){
+            if(N % i === 0){
+              count += i;
+            }
+          }
+          if(count == N){
+            return "YES";
+          }
+          else{
+            return "NO";
+          }
+                
+        };
+    </pre>
+
+    <h3>Reverse a Number.</h3>
+    <pre>var Reverse_Number = (N) => 
+        {
+          N = N + "";
+          var c = parseFloat(N.split('').reverse().join(''));
+          return c;
+        };
+    </pre>
+
+    <h3>Substring Check.</h3>
+    <pre>var Substring_Check = (S1, S2) => 
+        {
+          if(S1.includes(S2)){
+            return "YES";
+          }
+          else{
+            return "NO";
+          }
+        };
+    </pre>
+</body>
+</html>
